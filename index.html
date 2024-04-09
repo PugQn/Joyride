@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<!---Prior Knowledge Notice--->
+<!---This is my first semester coding and I am also taking INFO102, concurrently. I will use information from W3Schools.com, stackoverflow.com, htmlcolorcodes.com, and www.geeksforgeeks.org. --->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="media/siteLogo.png">
+  <title>Joyride Home</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!---Allows use of icons. Source: https://www.w3schools.com/css/css_icons.asp --->
+</head>
+
+<body>
+  <nav>
+    <!--I have chosen to use buttons here as the use of <ul> was making the CSS interesting. Buttons were a work around.-->
+    <img src="media/navLogo.png" alt="Joyride Logo" id="navLogo">
+    <a href="regpay.html" class="navBtn" id="navIcon" style="margin-right: 15px;"><i class="material-icons">account_circle</i></a>
+    <a href="faq.html"><button class="navBtn">FAQ</button></a>
+    <a href="services.html"><button class="navBtn">Services</button></a>
+    <a href="index.html"><button class="navBtn">Home</button></a>    
+  </nav>
+
+  <div class="welcome">
+    <!--h1 is hidden so that it is not seen as the company name is in the image.-->
+    <h1 hidden>JOYRIDE</h1>
+    <img src="media/homeLogo.png" alt="Joyride Logo" id="homeLogo">
+  </div>
+
+  <!--I decided to use the <aside> tag as this is a far more descriptive way to section the UI. However, a <div> would have done here so long as I gave it a class.-->
+  <aside id="asideIndex">
+    <div class="servicesTitle">
+      <h2 id="servicesTitle">How do you</h2>
+      <img src="media/homeLogo.png" alt="Joyride" class="servicesLogo">
+    </div>
+
+    <button class="wideNavBtns" onclick="document.location='regpay.html'">Book a JoyRide</button>
+
+    <br>
+    <br>
+    <br>
+    
+    <div class="faqContact">
+      <h3>Contact us!</h3>
+      <p><i class="material-icons">phone</i> 0800 JOYRIDE (0800 569 7433)</p>
+      <p><i class="material-icons">email</i> gohappy@joyride.co.nz</p>
+      <p><i class="material-icons">place</i>85 Ghuznee Street, Te Aro, Wellington 6011</p>
+    </div>
+      
+  </aside>
+
+  <!--The main body of the site had to sit in a container that basically blocked the area behind the <aside> as it has sticky positioning and a high z-index. This means that anything that follows could potentially sit behind it and get blocked from the user's vision.-->
+  
+  <div class="container">
+        
+    <article class="aboutUs">
+      
+      <h2>About Us</h2>
+
+      <h3>Our Mission</h3>
+      <p>To enable affordable, eco-friendly and convenient journeys, with a diverse fleet of small vehicles in accessible pick-up locations.</p>
+
+      <h3>What we're about</h3>
+      <p>
+        Whether you’re heading into the city, down the slopes, or chilling by the waterfront, Joyride is the eco-affordable way to enjoy your journey. Joyride is your answer to exploring and enjoying everything Wellington has to offer.
+      </p>
+
+      <p>
+        We provide an easy alternative to owning and maintaining personal transport. With pick-up locations across Wellington and vehicles (electric to old-fashioned) to suit your style, it’s the easiest way to pimp your ride every day of the week.
+      </p>
+
+      <h3>Who we are</h3>
+      <p>
+        We're Wei Zhang (slope fiend) and Tory Kairua (e-commerce guru), and we've been mates since Uni. We even did our O.E. together!
+      </p>
+      <!--these images are stock photos I put name tags on :) -->
+      <img class="myFace" src="media/weiZhang.png" alt="Wei Zhang">
+      <img class="myFace" src="media/toryKairua.png" alt="Tory Kairua">
+      
+      <p>Take a Joyride. Go Happy!</p>
+      
+      <h3>Come visit our office!</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.731431983233!2d174.77425820000002!3d-41.292949199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38afd81dc3774f%3A0x3f8f573af7e08351!2s85%20Ghuznee%20Street%2C%20Te%20Aro%2C%20Wellington%206011!5e0!3m2!1sen!2snz!4v1684348948205!5m2!1sen!2snz" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </article>
+  
+  </div>
+
+  <!--There is an issue here with the <aside> scrolling up as you reach the bottom of the page. I still haven't manaaged to figure out why it is doing this. It would have been easier if I just made the <aside> visible (fixed vs. sticky positioning) as the user lands on the home page but it didn't fit the asthetic I wanted. I feel the bikes and the logo is nice and clean but also makes it obvious what the company does.-->
+  
+  <footer>
+    <i class="material-icons">phone</i> 0800 JOYRIDE (0800 569 7433)
+    <img src="media/footerLogo.png" id="footerLogo">
+    <i class="material-icons">email</i> gohappy@joyride.co.nz
+  </footer>
+  
+  <!--I have put the script tag at the bottom of the page as the browser will load from the top. This means that the site will render before it runs any functions.-->
+  <script src="myscripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+/*
+Pink - #ff3374
+Orange - #ff5833
+Yellow - #ffbe33
+Lime - #daff33
+Green - #74ff33
+Leaf - #33ff58
+*/
+
+* {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
+}
+html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  
+}
+body {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-image:url(media/welcomeBike.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: auto;
+} /*Bikes as background image. Source: https://www.istockphoto.com/photos/row-of-bikes*/
+
+/*Navigation Selectors*/
+nav {
+  width: 100%;
+  height: 50px;
+  background-color: #ff3374;
+  color: white;
+  position: fixed;
+  top: 0px;
+  margin: 0px;
+  z-index: 100;
+  border-bottom: 5px solid #BF597A;
+  overflow: hidden;
+}
+#navLogo {
+  max-height: 40px;
+  margin: 5px;
+  margin-left: 30px;
+}
+.navBtn {
+  height: 50px;
+  font-size: 20px;
+  font-stretch: ultra-condensed;
+  float: right;
+  border: none;
+  background-color: #ff3374;
+  color: white;
+  padding-bottom: 0px;
+  padding: 10px;
+}
+#navIcon{
+  padding-top: 12px;
+  height: 28px;
+  font-size: 25px;
+}
+a:hover, a:active, button:hover, button:active {
+  background-color: #ffbe33;
+  color: #ff3358;
+  overflow: visible;
+  cursor: pointer;
+}
+
+/*Footer Selectors*/
+footer {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0px;
+  background-color: #ff3358;
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+  border-top: 5px solid #BF597A;
+  z-index: 100;
+}
+#footerLogo {
+  height: 30px;
+  margin: 15px 15px 0px 15px;
+}
+
+/*General interface selectors*/
+article {
+  background-color: whitesmoke;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+  text-align: center;
+  padding: 20px 50px 50px 50px;
+  border: solid 6px #ff3374;
+  color: black;
+}
+h2 {
+  font-size: 50px;
+  color: #33ff58;
+  -webkit-text-stroke: 1px #1A802C;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding-top: 0px;
+}
+.container {
+  text-align: center;
+  color: whitesmoke;
+  padding-left: 320px;
+}
+aside {
+  position: fixed;
+  top: -1px;
+  left: 0px;
+  text-align: center;
+  background-color: #ff5833;
+  width: 300px;
+  height: 100vh;
+  padding: 30px 30px 80px 30px;
+  z-index: 50;
+}
+#closeBtn {
+  background-color: whitesmoke;
+  color: darkgrey;
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+  padding: 0px;
+  position: relative;
+  top: -40px;
+  right: -30px;
+  float: right;
+  border: 1px solid whitesmoke;
+}
+#closeBtnFaq {
+  background-color: whitesmoke;
+  color: darkgrey;
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+  padding: 0px;
+  position: relative;
+  right: -15px;
+  float: right;
+  border: 1px solid whitesmoke;
+}
+#closeBtn:hover, #closeBtnFaq:hover {
+  background-color: whitesmoke;  
+}
+.wideNavBtns {
+  width: 280px;
+  margin: 7px;
+  border: 5px solid #74ff33;
+  position: relative;
+  top: -25px;
+  background-color: #ffbe33;
+  font-weight: bold;
+  font-size: 20px;
+}
+form {
+  text-align: left;
+  width: 60%;
+  margin: auto;
+}
+input, select {
+  float: right;
+}
+
+/*Landing page*/
+.welcome {
+  width: 100%;
+  height: 100vh;
+  margin: 0px
+}
+#homeLogo {
+  z-index: 1;
+  position: relative;
+  left: 0px;
+  top: 45vh;
+}
+#asideIndex {
+  position: sticky;
+  left: 0vh;
+  z-index: 99;
+  height: 100vh;
+}
+.aboutUs {
+  margin-bottom: 150px;
+}
+.myFace {
+  object-fit: scale-down;
+  max-width: 30%;
+  min-width: 70px;
+  margin: 7px;
+}
+.contact {
+  background-color: #58ff;
+  padding: 30px;
+  display: flex;
+  width: 100%;
+  color: white;
+}
+
+
+/*Services Navigator Selectors*/
+.servicesTitle {
+  line-height: 70px;
+  margin-bottom: -30px;
+}
+.servicesLogo {
+  position: relative;
+  height: 70px;
+  margin-left: 20px;
+  top: -40px
+}
+.serNavBtnImg {
+  height: 13%;
+  width: 130px;
+  border: 5px solid #74ff33;
+  position: relative;
+  top: -25px;
+  margin: 7px; 
+  object-fit: scale-down;
+}
+.serNavBtnImg:hover {
+  cursor: pointer;
+  border: 5px solid #ffbe33;
+}
+#serNavMBike {
+  background-image: url(media/mbike.png);
+  background-size: 130px 130px;
+  background-position: center;
+}
+#serNavBike {
+  background-image: url(media/bike.jpg);
+  background-size: 130px 130px;
+  background-position-y: bottom;
+}
+#serNavEBike {
+  background-image: url(media/eBikeNav.jpg);
+  background-size: 130px 130px;
+  background-position-y: bottom;
+}
+#serNavScooter {
+  background-image: url(media/scooters.jpeg);
+  background-size: 130px 130px;
+  background-position-y: bottom;
+}
+#serNavHelmet {
+  background-image: url(media/helmet.jpg);
+  background-size: 130px 130px;
+  background-position-y: top;
+}
+#serNavMonster {
+  background-image: url(media/mscooters.jpg);
+  background-size: 130px 130px;
+  background-position: bottom;
+}
+.serNavBtns {
+  width: 130px;
+  margin: 7px;
+  border: 5px solid #74ff33;
+  position: relative;
+  top: -25px;
+  background-color: #ffbe33;
+  font-weight: bold;
+  font-size: 20px;
+}
+.serNavBtns:hover, .serNavBtns:active {
+  cursor: pointer;
+  background-color: #daff33;
+}
+.services {
+  position: relative;
+  display: inline-block;
+  padding: 0px 10px 0px 70px;
+}
+
+/*Product Selectors*/
+.product {
+  margin: auto;
+  object-fit: scale-down;
+}
+.productPhoto {
+  max-width: 500px;
+  max-height: 300px;
+  margin: 20px;
+}
+.productPhotoHel {
+  max-width: 210px;
+  margin: 20px;
+}
+.productText {
+  max-width: 500px;
+  margin: 20px;
+}
+.productSpec {
+  display: none;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+td {
+  border: 2px solid #daff33;
+  padding: 5px;
+}
+#servicesHow, #faq, #rpLogin, #rpBook {
+  display: block;
+}
+#servicesMBike, #servicesBike, #servicesEBike, #servicesScooter, #servicesHelmet, #servicesMonster, #servicesMap, #servicesPrices, #faqFeedback, #rpRegister, #rpConfirmDetails, #rpBook, #bookHelmetMountain, #bookHelmetRoad, #bikeSize, #dayNumber, #dayNumberDiscount, #confirmJoyride, #riderBikeSize, #riderBikeSizeConfirm, #emailInput, #pay  {
+  display: none;
+}
+ul {
+  text-align: left;
+  margin: 0px 20px 0px 20px;
+}
+
+/*FAQ Selectors*/
+.faqContact {
+  color: whitesmoke;
+}
+.faq {
+  padding-bottom: 50px;
+  position: relative;
+  margin-bottom: 70px;
+}
+.faqBtn {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #daff33;
+  background-color: #ffbe33;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  display: block;
+  float: none;
+}
+.faqBtn:hover, .faqBtn:active {
+  background-color: #daff33;
+}
+.faqAnswer {
+  width: 100%;
+  display: none;
+  background-color: #daff33;
+}
+
+
+/*REGPAY Selectors*/
+.regPay {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 300px;
+}
+.regPayDiv {
+  text-align: left;
+}
+.note {
+  font-size: x-small;
+  color: #1A802C;
+  font-style: italic;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.payment {
+  width: 60%;
+  margin: auto;
+}
+#td1 {
+  text-align: right;
+}
+.td2 {
+  text-align: left;
+}
+
+/*Register/confirm details*/
+#registerBtn {
+  margin-right: 10px;
+}
+.details {
+  width: 200px;
+  float: right;
+}

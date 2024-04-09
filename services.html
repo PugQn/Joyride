@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html>
+
+<!---Page Purpose: Services - Describes the product range, hire charges, and locations --->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="media/siteLogo.png">
+  <title>Joyride - Services</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!---Source: https://www.w3schools.com/css/css_icons.asp --->
+</head>
+
+<body>
+  <nav>
+    <img src="media/navLogo.png" alt="Joyride Logo" id="navLogo">
+    <a href="regpay.html" class="navBtn" id="navIcon" style="margin-right: 15px;"><i
+        class="material-icons">account_circle</i></a>
+    <a href="faq.html"><button class="navBtn">FAQ</button></a>
+    <a href="services.html"><button class="navBtn">Services</button></a>
+    <a href="index.html"><button class="navBtn">Home</button></a>
+  </nav>
+
+  <div class="container">
+
+    <!--On this page I put the <aside> in the container (not sure why) but it seems to0 work as essentially the <aside> doesn't sit in the container and is only anchored to it (kinda like a helium balloon - doesn't matter where the string is only that it is floating upwards).
+    Also, I decided to use images as buttons as it made the menu more exciting but is a little confusing for the user. Are they even buttons? I tried to make this more obvious by making the borders change colours, and the cursor change to pointer on hovering over the button. I did try to put text on the images but that was not good (spoilt the images and was hard to read).-->
+    
+    <aside>
+
+      <div class="servicesTitle">
+        <h2 id="servicesTitle">Choose your</h2>
+        <img src="media/homeLogo.png" alt="Joyride" class="servicesLogo">
+      </div>
+
+      <button class="wideNavBtns" onclick="showServices()">How to Go Happy!</button>
+
+      <button class="serNavBtnImg" id="serNavMBike" onclick="showSerNavMBike()" title="Mountain Bikes"></button>
+      <!---Source: https://mbaction.com/photo-of-the-day-21/--->
+
+      <button class="serNavBtnImg" id="serNavBike" onclick="showSerNavBike()" title="Road Bikes"></button> <!---Source: https://www.aa.co.nz/travel/must-dos-this-summer/bike-around-auckland-citys-curvaceous-coastline/--->
+
+      <button class=" serNavBtnImg" id="serNavEBike" onclick="showSerNavEBike()" title="Electric Bikes"></button>
+      <!---Source: https://static.giant-bicycles.com/Images/Giant/Showcases/Banner_TemptE_1638484561.jpg--->
+
+      <button class="serNavBtnImg" id="serNavScooter" onclick="showSerNavScoot()" title="Electric Scooters"></button>
+      <!---Source: https://www.stuff.co.nz/travel/destinations/nz/111452459/move-over-lime-monster-scooters-are-here--->
+
+      <button class="serNavBtnImg" id="serNavMonster" onclick="showSerNavMonster()" title="Monster Scooters"></button>
+
+      <button class="serNavBtnImg" id="serNavHelmet" onclick="showSerNavHelmet()" title="Helmets"></button>
+      <!---Source: https://www.canyon.com/en-nz/blog-content/bicycle-gear-news/buyers-guide-bike-helmets/b3022022.html--->
+
+      <button class="serNavBtns" id="serNavMap" onclick="showSerNavMap()" title="Locations">Locations</button>
+
+      <button class="serNavBtns" onclick="showSerNavPrices()" title="Prices">Prices</button>
+      
+    </aside>
+
+    <article class="product">
+      <div id="servicesHow">
+        <h2>Go Happy!</h2>
+        <p>
+          For regular riders or occasional explorers, relaxing meanderers, or adrenaline junkies, we’ve got the Joyride for you! Choose from road bikes, mountain bikes, e-scooters, and monster scooters. Whether you’re going for an hour or a day, you can choose the time and place that suits your journey. We offer special rates for multi-day, multi-ride hires. You can store your Joyride at one of our locations if you don’t have a safe place to park up for multiday hires.
+        </p>
+
+        <h2>How to take a Joyride:</h2>
+        <p>
+          Register as a user by giving us your contact details. You will receive a confirmation email. Click on the link in your confirmation email and you’re ready to Go Happy!
+        </p>
+        <p>
+          Select your ride, date, time, location, and duration and book your Joyride!
+        </p>
+        <p>
+          No helmet? No worries! Add a helmet to your booking to match your type of Joyride. On the day, you’ll receive an email with the bike lock code. This code is only valid for the time you’ve booked your Joyride. Need a lock? No stress! Just take the lock with you. The code stays the same.
+        </p>
+        <p>
+          Going with friends? Book a Joyride for everyone but make sure to let us know when you’re booking so we can make sure you’re all insured. Insured? Yeah! All our Joyrides are insured for loss, theft, or damage so you and your party can Par-Tay! It’s all included!
+        </p>
+        <p>
+          Warning! Excess partying may incur a $5 late fee for every half hour after your booked time on top of the usual hourly charge. Other Joyriders may be waiting to Go Happy!
+        </p>
+
+        <button class="faqBtn" onclick="document.location='regpay.html'">Book your Joyride now!</button>
+      </div>
+
+
+      <!--Each type of vehicle needed its own page and I didn't like the idea of scrolling forever, so I used the same concept as the single page application we are developing in INFO102, having sections showing and hiding. I feel this makes the site more user firendly as it chunks down the information. I was going to make it so you could select items for hire in the services pages but then I realised that this would be beyond the scope of the assessment-->
+      
+      <div id="servicesMBike">
+
+        <h2>Mountain Bikes</h2>
+        <!---Source: https://www.cyclescience.co.nz/collections/mountain-bikes-full-suspension/products/marin-2021-rift-zone-2--->
+
+        <img src="media/mBikeHire.png" class="productPhoto">
+
+        <p>
+          The Rift Zone is our most speed oriented MultiTrac bike, created for the rider looking for the speed and roll
+          over capabilities of 29” wheels in a trail capable package. Long, low, and slack trail geometry is more
+          aggressive than an XC race bike for more control at top speed, and more fun while chasing seconds.
+        </p>
+
+        <p>Be sure to choose the right size bike for you when you're booking. It'll be both safer and more Joyful!</p>
+
+        <!--Using a table to display the specification information made it cleaner and easier to read. I also liked the idea of viewing only the information you want to see with these sections popping in an out of view. All the functions which do this start with toggle**. When you look at the functions, be sure to look for the ones with the "//Comments here" as the others don't have comments. I just repeated the function and changed the things that were toggling.-->
+        <h3>Specifications:</h3>
+        <input type="button" class="faqBtn" value="Frame" onclick="toggleMBikeFrame()">
+        <div class="productSpec" id="mBikeFrame">
+          <table>
+            <tr>
+              <td>
+                Colour:
+              </td>
+              <td>
+                Teal/Silver/Black
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Frame:
+              </td>
+              <td>
+                Series 3 6061 Aluminum Frame, 29” Wheels, 125mm Travel, MultiTrac Suspension Platform, 148x12 Boost
+                Spacing2, 73mm Threaded BB w/ ISCG05 Tabs
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Fork:
+              </td>
+              <td>
+                RockShox Recon Silver RL 29", 130mm Travel, Solo Air, Compression and Rebound Adjustment, Alloy Tapered
+                Steerer, Fast Black Uppers, 110x15mm Boost Spacing, Maxle Stealth, 42mm Offset
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Shock:
+              </td>
+              <td>
+                RockShox Deluxe Select R, Debonair Air Sleeve, Rebound Adjustment, Custom Tune, 210x50mm, M8x25mm
+                Hardware
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight:
+              </td>
+              <td>
+                N/A
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <input type="button" class="faqBtn" value="Drivetrain" onclick="toggleMBikeDrive()">
+        <div class="productSpec" id="mBikeDrive">
+          <table>
+            <tr>
+              <td>
+                Crankset:
+              </td>
+              <td>
+                FSA Comet, Modular 1x, 32T Direct Mount Chainring, MegaTooth Technology, Boost Spacing
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Chain:
+              </td>
+              <td>
+                KMC X-12 Silver and Black
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Bottom Bracket:
+              </td>
+              <td>
+                External Sealed Cartridge Bearing
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Rear Derailleur:
+              </td>
+              <td>
+                Shimano Deore, 12-Speed, SGS
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Front Derailleur:
+              </td>
+              <td>
+                N/A
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Derailleur Shifter:
+              </td>
+              <td>
+                Shimano Deore, 12-Speed, SL-6100IR
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Freewheel/Cassette:
+              </td>
+              <td>
+                Shimano, Deore M6100, 12-Speed, 10-51T
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <input type="button" class="faqBtn" value="Wheels" onclick="toggleMBikeWheels()">
+        <div class="productSpec" id="mBikeWheels">
+          <table>
+            <tr>
+              <td>
+                Tyres:
+              </td>
+              <td>
+                Vee Tire Flow Snap 29x2.35", Tackee Compound, Tubeless Ready
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Wheels/Rims:
+              </td>
+              <td>
+                Marin, Double Wall Alloy, 29mm Inner, Pinned Joint, Disc Specific, 32H, Tubeless Compatible
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Front Hubs:
+              </td>
+              <td>
+                Shimano HF-MT410B, 110x15mm, Centerlock
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Rear Hubs:
+              </td>
+              <td>
+                Shimano HB-MT410B, 148x12mm, Centerlock, Microspline Freehub Body
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <input type="button" class="faqBtn" value="Breaks" onclick="toggleMBikeBreaks()">
+        <div class="productSpec" id="mBikeBreaks">
+          <table>
+            <tr>
+              <td>
+                Brakes:
+              </td>
+              <td>
+                Shimano BR-MT200 Hydraulic Disc, 180mm Rotor
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Brake Levers:
+              </td>
+              <td>
+                Shimano BR-MT201 Hydraulic Disc
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <input type="button" class="faqBtn" value="Other" onclick="toggleMBikeOther()">
+        <div class="productSpec" id="mBikeOther">
+          <table>
+            <tr>
+              <td>
+                Handle Bar:
+              </td>
+              <td>
+                Marin Mini-Riser, 6061 Double Butted Aluminum, 780mm Width, 28mm Rise, 5º Up, 9º Back
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Stem:
+              </td>
+              <td>
+                Marin 3D Forged Alloy, 35mm
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Seat Post:
+              </td>
+              <td>
+                TranzX, YSP23JL, 1x Remote, Size S 125mm Travel, Size M and L 150mm Travel, Size XL 175mm Travel, 30.9mm
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Saddle:
+              </td>
+              <td>
+                Marin Speed Concept
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <br>
+        
+        <button class="faqBtn" onclick="document.location='regpay.html'">Book your Joyride now!</button>
+      </div>
+
+      <div id="servicesBike">
+
+        <h2>Road Bikes</h2>
+        <!---Source: https://www.cyclescience.co.nz/collections/hybrid-and-city-bikes/products/liv-2023-flourish-fs--->
+
+        <img src="media/roadBike.png" class="productPhoto">
+
+        <p>
+          The Flourish is your light, stylish and eco-friendly companion for your next cruise or errand, making the
+          journey from A to B a delight. Lightweight and durable ALUXXGrade aluminium frame with a step-through design
+          makes getting on and off effortless.
+        </p>
+        <p>
+          Pressure-relieving grips and Selle Royal Essenza+ saddle provide support and reduce the impact of bumpy roads
+          and paved paths, keeping you comfortable and in control. Fully equipped with fenders that block debris, a
+          kickstand for parking, a chain cover that keeps clothing out of the chain and a hem weight that secures
+          clothing in the presence of wind.
+        </p>
+        <p>
+          An eco-conscious design approach to the saddle, tyres, and paint job lessens your overall carbon footprint
+          because after all, that’s one of the true benefits of going by bike.
+        </p>
+
+        <p>
+          Be sure to choose the right size bike for you when you're booking. It'll be both safer and more Joyful!
+        </p>
+
+        <h3>Specifications:</h3>
+
+        <input type="button" class="faqBtn" value="Frame" onclick="toggleBikeFrame()">
+        <div class="productSpec" id="bikeFrame">
+          <table>
+            <tr>
+              <td>
+                Colour:
+              </td>
+              <td>
+                Estoril Blue
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Frame:
+              </td>
+              <td>
+                ALUXX-Grade aluminium
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Fork:
+              </td>
+              <td>
+                SR Suntour NEX RL P, 50mm travel
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Shock:
+              </td>
+              <td>
+                N/A
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <input type="button" class="faqBtn" value="Drivetrain" onclick="toggleBikeDrive()">
+        <div class="productSpec" id="bikeDrive">
+          <table>
+            <tr>
+              <td>
+                Crankset:
+              </td>
+              <td>
+                ProWheel TY-CM90, 28/38/48
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Chain:
+              </td>
+              <td>
+                KMC Z8.1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Bottom Bracket:
+              </td>
+              <td>
+                Sealed cartridge
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Rear Derailleur:
+              </td>
+              <td>
+                Shimano Altus M310
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Front Derailleur:
+              </td>
+              <td>
+                Shimano Tourney TY601
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Derailleur Shifter:
+              </td>
+              <td>
+                Shimano EF500, 3x8
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Freewheel/Cassette:
+              </td>
+              <td>
+                Shimano Deore M6100 10-51t
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <input type="button" class="faqBtn" value="Wheels" onclick="toggleBikeWheels()">
+        <div class="productSpec" id="bikeWheels">
+          <table>
+            <tr>
+              <td>
+                Tyres:
+              </td>
+              <td>
+                [F] and [R] Kenda, 700x38c
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Wheels/Rims:
+              </td>
+              <td>
+                Giant double-wall aluminium
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <input type="button" class="faqBtn" value="Breaks" onclick="toggleBikeBreaks()">
+        <div class="productSpec" id="bikeBreaks">
+          <table>
+            <tr>
+              <td>
+                Brakes:
+              </td>
+              <td>
+                [F] and [R] Alloy, direct pull
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <input type="button" class="faqBtn" value="Other" onclick="toggleBikeOther()">
+        <div class="productSpec" id="bikeOther">
+          <table>
+            <tr>
+              <td>
+                Handle Bar:
+              </td>
+              <td>
+                Alloy High rise, 25.4mm
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Stem:
+              </td>
+              <td>
+                Alloy, 25.4mm
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Seat Post:
+              </td>
+              <td>
+                Alloy, suspension, 27.2mm
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Saddle:
+              </td>
+              <td>
+                Selle Royal Essenza
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Extras:
+              </td>
+              <td>
+                42mm max tyre size, front / rear lighting, fenders, kickstand, basket
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <br>
+        
+        <button class="faqBtn" onclick="document.location='regpay.html'">Book your Joyride now!</button>
+      </div>
+
+      <div id="servicesEBike">
+
+        <h2>Electric Bikes</h2>
+        <!---Source: https://www.cyclescience.co.nz/collections/electric-bikes/products/liv-2023-tempt-e-1--->
+
+        <img src="media/eBike.png" class="productPhoto">
+
+        <p>
+          More than just a way to get around - The Tempt E+ is freedom, fun and joy. The ultra-reliable EnergyPak 500Whr has an average range of 120km with a potential to reach up to 180km, while the EnergyPak 400Whr has an average range of 100km and can reach 150km*, helping you ride further to access new trails and experiences. *Actual range depends on several factors including weight, elevation, terrain and acceleration.
+        </p>
+        <p>
+          Pressure-relieving grips and Selle Royal Essenza+ saddle provide support and reduce the impact of bumpy roads and paved paths, keeping you comfortable and in control. Fully equipped with fenders that block debris, a kickstand for parking, a chain cover that keeps clothing out of the chain and a hem weight that secures clothing in the presence of wind. The easy-to-access EnergyPak side-release battery isbeautifully integrated  into a lightweight and durable ALUXX-Grade aluminium frame, designed and tuned for women using Liv's women     first philosophy. SyncDrive Core motor with 50Nm torque creates a natural yet powerful ride feel.
+        </p>
+
+        <p>
+          Be sure to choose the right size bike for you when you're booking. It'll be both safer and more Joyful!
+        </p>
+
+        <p>
+          For multi-day hire, your Joyride needs to be stored at the location you collected it from over night to ensure a full charge for your next Joyride.
+        </p>
+
+        <h3>Specifications:</h3>
+        <input type="button" class="faqBtn" value="Frame" onclick="toggleEBikeFrame()">
+        <div class="productSpec" id="eBikeFrame">
+          <table>
+            <tr>
+              <td>
+                Colour:
+              </td>
+              <td>
+                Copper Coin
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Frame:
+              </td>
+              <td>
+                ALUXX-Grade aluminium, disc, integrated KSA18 kickstand mount
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Fork:
+              </td>
+              <td>
+                SR Suntour XCR 32 Coil LO Boost, 29"/27.5", 100mm travel, lockout
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Shock:
+              </td>
+              <td>
+                N/A
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <input type="button" class="faqBtn" value="Drivetrain" onclick="toggleEBikeDrive()">
+        <div class="productSpec" id="eBikeDrive">
+          <table>
+            <tr>
+              <td>
+                Crankset:
+              </td>
+              <td>
+                FSA Comet E-Bike crank arm set FSA MegaTooth Direct-mount 1X steel 36T
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Chain:
+              </td>
+              <td>
+                KMC e.10 Sport, e-bike optimised
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Bottom Bracket:
+              </td>
+              <td>
+                N/A
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Rear Derailleur:
+              </td>
+              <td>
+                Shimano Deore, 10-speed, Shadow+
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Front Derailleur:
+              </td>
+              <td>
+                N/A
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Derailleur Shifter:
+              </td>
+              <td>
+                Shimano Deore
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Freewheel/Cassette:
+              </td>
+              <td>
+                Shimano Deore, CS-M4100, 11-42T, 10-speed
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Drive Unit:
+              </td>
+              <td>
+                SyncDrive Core, 50Nm, Powered by Yamaha
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <input type="button" class="faqBtn" value="Wheels" onclick="toggleEBikeWheels()">
+        <div class="productSpec" id="eBikeWheels">
+          <table>
+            <tr>
+              <td>
+                Tyres:
+              </td>
+              <td>
+                [F] and [R] Maxxis Rekon 27.5x2.4"/ 29r x 2.4" Wire Bead 60TPI
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Wheels/Rims:
+              </td>
+              <td>
+                Liv GX03V 29 or 27.5, alloy, double wall
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Hubs:
+              </td>
+              <td>
+                Giant eTracker Sport
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <input type="button" class="faqBtn" value="Breaks" onclick="toggleEBikeBreaks()">
+        <div class="productSpec" id="eBikeBreaks">
+          <table>
+            <tr>
+              <td>
+                Brakes:
+              </td>
+              <td>
+                Shimano BR-MT200, hydraulic disc, [F] 180mm, [R] 160mm
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Brake Levers:
+              </td>
+              <td>
+                Shimano BL-MT200
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <input type="button" class="faqBtn" value="Other" onclick="toggleEBikeOther()">
+        <div class="productSpec" id="eBikeOther">
+          <table>
+            <tr>
+              <td>
+                Handle Bar:
+              </td>
+              <td>
+                Giant Connect TR Riser 31.8mm
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Stem:
+              </td>
+              <td>
+                Giant Connect
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Seat Post:
+              </td>
+              <td>
+                Giant 30.9mm, 2-bolt Micro Adjust, alloy
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Saddle:
+              </td>
+              <td>
+                Liv Sport
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Battery:
+              </td>
+              <td>
+                EnergyPak 500Wh
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Charger:
+              </td>
+              <td>
+                EnergyPak 4A fast charger
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Display/Control:
+              </td>
+              <td>
+                RideControl Dash, full colour lcd screen
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <br>
+        
+        <button class="faqBtn" onclick="document.location='regpay.html'">Book your Joyride now!</button>
+      </div>
+      
+      <div id="servicesScooter">
+
+        <h2>Electric Scooters</h2>
+        <!---Source: https://electricscootershop.co.nz/products/apollo-air-pro?_pos=5&_fid=6177d3ce3&_ss=c--->
+
+        <img src="media/scooterHire.png" class="productPhoto">
+
+        <p>
+          The Air Pro is a fabulous full-size scooter from the Canadian Apollo brand who have been making big waves in the scooter industry lately, perfect for lighter riders and shorter commutes. With a large standing area and tall handlebar height, this scooter avoids the cramped feeling of many smaller options. 2 air-filled tyres and a small headshock absorb the bumps nicely, and you are rated to a 100kg rider. Light-weight and easy to fold and carry, this is a great commuter scooter.
+        </p>
+
+        <p>
+         For multi-day hire, your Joyride needs to be stored over night at the location you collected it from to ensure a full charge for your next Joyride.
+        </p>
+
+        <input type="button" class="faqBtn" value="Specifications" onclick="toggleEScootSpecs()">
+        <div class="productSpec" id="eScootSpecs">
+          <table>
+            <tr>
+              <td>
+                Brand:
+              </td>
+              <td>
+                Apollo
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Model:
+              </td>
+              <td>
+                Air Pro
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Battery:
+              </td>
+              <td>
+                10.4AH
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Voltage:
+              </td>
+              <td>
+                36V
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Motor:
+              </td>
+              <td>
+                350W Rear Drive
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Brakes:
+              </td>
+              <td>
+                Front Drum and regen
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Range:
+              </td>
+              <td>
+                Up to 30KM
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Weight:
+              </td>
+              <td>
+                17KG
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Charge time:
+              </td>
+              <td>
+                6 Hours (from 0%)
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Max speed:
+              </td>
+              <td>
+                30 KM/H
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Max load:
+              </td>
+              <td>
+                100KG
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <br>
+        
+        <button class="faqBtn" onclick="document.location='regpay.html'">Book your Joyride now!</button>
+      </div>
+
+      <div id="servicesMonster">
+
+        <h2>Monster Scooters</h2>
+
+        <img src="media/mscooters.jpg" class="productPhoto">
+
+        <p>
+          These non-motorized, off-road scooters are fantastic fun for young, old, and just about everyone in between. From toddlers to teens and grandparents – you’ll be sure to have a blast. You’ll find Monster Scooters to be a truly unique adventure. Enjoy a thrilling ride down a track of your choice, meander through the breathtaking indigenous forest whilst enjoying the breathtaking scenery.
+        </p>
+
+        <br>
+        
+        <button class="faqBtn" onclick="document.location='regpay.html'">Book your Joyride now!</button>
+      </div>
+      
+      <div id="servicesHelmet">
+
+        <h2>Helmets</h2>
+        <!---Source: https://electricscootershop.co.nz/products/apollo-air-pro?_pos=5&_fid=6177d3ce3&_ss=c--->
+
+        <img src="media/helmet.jpg" class="productPhoto">
+
+        <p>
+          Choose a helmet to suit your Ride and your size when you book your Joyride. We have helmets to suit every head size, from kids to adults.
+        </p>
+
+        <input type="button" class="faqBtn" value="Mountain Bike Helmets" onclick="toggleMountHel()">
+        <div class="productSpec" id="mountHel">
+          <!---Source: https://www.evocycles.co.nz/Product/500110/fox-rampage-comp-helmet-dirtsurfer--->
+          <img src="media/mountHelmet.jpg" class="productPhoto">
+          <p>
+            The Rampage Comp Helmet offers a class-leading feature set including MIPS™, a lightweight fiberglass shell, fully-adjustable visor, and many other options usually reserved for much more expensive mountain bike helmets. The design is inspired by our championship-winning Rampage Pro Carbon and maintains that aggressive design which looks as fast sitting still as it does on the bike.
+          </p>
+
+          <h3>Features:</h3>
+          <ul>
+            <li>Proven MIPS™ impact protection system reduces rotational forces in a crash</li>
+            <li>Lightweight fiberglass shell designed for strength and performance</li>
+            <li>Goggle compatible adjustable visor</li>
+            <li>Removable, washable moisture wicking liner</li>
+            <li>Lightweight and reliable double d-ring closure</li>
+          </ul>
+
+          <h3>Certifications:</h3>
+          <ul>
+            <li>CPSC</li>
+            <li>EN 1078</li>
+            <li>AS/NZS 2063</li>
+            <li>ASTM 1952-15 downhill</li>
+          </ul>
+
+          </p>
+        </div>
+
+        <input type="button" class="faqBtn" value="Road Bike and Scooter Helmets" onclick="toggleRoadHel()">
+        <div class="productSpec" id="roadHel">
+          <!---Source: https://www.evocycles.co.nz/Product/542947/giro-isode-mips-road-helmet-matte-portaro--->
+          <img src="media/roadHelmet.png" class="productPhoto">
+          <p>
+            The perfect companion for your riding, no matter how fast or how far you ride. Sometimes the smartest designs are also the simplest. The Isode MIPS® helmet is an easy fit for riders who want classic style with the latest features, yet don't want to spend a fortune or compromise comfort.
+          </p>
+
+          <h3>Features:</h3>
+          <ul>
+            <li>In-Mold construction keeps the weight low</li>
+            <li>Easy one-handed adjustments of our acclaimed Roc Loc Sport MIPS system makes for a sure fit at the turn of a dial</li>
+            <li>Integrated MIPS® (Multi-Directional Impact Protection System) allows you to customise fit/feel for great stability and long-range comfort while providing an added measure of protection from rotational forces in the event of an angled impact</li>
+          </ul>
+
+          <h3>Specifications:</h3>
+          <table>
+            <tr>
+              <td>
+                Construction:
+              </td>
+              <td>Full Hardbody Coverage Compact Shape</td>
+            </tr>
+            <tr>
+              <td>
+                Shell Type:
+              </td>
+              <td>Polycarbonate Shell</td>
+            </tr>
+            <tr>
+              <td>
+                Number Of Vents:
+              </td>
+              <td>22
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Interior/Liner Type:
+              </td>
+              <td>Quick-dry Padding
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Gender:
+              </td>
+              <td>Unisex
+                </td>
+            </tr>
+            <tr>
+              <td>
+                Fit System:
+              </td>
+              <td>Roc Loc Sport MIPS
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Impact Liner Type:
+              </td>
+              <td>EPS
+              </td>
+            </tr>
+          </table>
+
+        </div>
+
+        
+        <br>
+        
+        <button class="faqBtn" onclick="document.location='regpay.html'">Book your Joyride now!</button>
+      </div>
+
+      <div id="servicesMap">
+
+        <h2>Locations</h2>
+
+        <p>
+          We currently have three locations across Wellington. As more people discover our services, we'll be expanding to more locations with more Joyrides so you know there's always a Ride when you want it, where you want it. Go Happy!
+        </p>
+
+        <table>
+          <tr>
+            <td>
+              Makara Peak mountain bike park
+            </td>
+            <td>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.542840135302!2d174.71962867681012!3d-41.2970530410305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38b0f26bb324c5%3A0x51dd0badc3b48c5a!2sMakara%20Peak%20Mountain%20Bike%20Park!5e0!3m2!1sen!2snz!4v1684020759245!5m2!1sen!2snz"
+                  width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Hutt River Valley
+            </td>
+            <td>
+              <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12016.451094787048!2d174.98605043804494!3d-41.15389048537596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d40ab333fa0aa09%3A0x2a00ef6165e1e6b0!2sTe%20Awa%20Kairangi%20%2F%20Hutt%20River!5e0!3m2!1sen!2snz!4v1684020991417!5m2!1sen!2snz"
+                  width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Wellington Harbour Front
+            </td>
+            <td>
+              <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5995.526229359616!2d174.77435723319894!3d-41.29225973784244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38af2825f435d3%3A0x1946203432984283!2sWellington%20Waterfront%20Walk!5e0!3m2!1sen!2snz!4v1684021157919!5m2!1sen!2snz"
+                  width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </td>
+          </tr>
+        </table>
+
+        <br>
+        
+        <button class="faqBtn" onclick="document.location='regpay.html'">Book your Joyride now!</button>
+      </div>
+
+      <div id="servicesPrices">
+
+        <h2>Prices</h2>
+
+        <p>
+          Take a Joyride for 1, 2, 3 or even 24 hours! What about Going Happy for a whole weekend! We have discounts for multiday hire and multi-ride hires. Every fifth trip is on us!
+        </p>
+
+        <p>
+          At Joyride, we like to keep things simple. Prices are an easy hourly rate, capped at 8 hours a day. Going Happy overnight is only an extra $5/night per Ride.
+        </p>
+
+        <p>
+          Need a helmet? No worries! We have those too! $5 per Joyide and a $10 deposit per helmet. Take the lock with you when you pick up your Joyride to make sure it's kept safe.
+        </p>
+
+        <table>
+          <hd>
+            <td>
+              Joyride
+            </td>
+            <td>
+              Rider
+            </td>
+            <td>
+              Hourly Price
+            </td>
+          </hd>
+          <tr>
+            <td rowspan="2">
+              Mountain bike
+            </td>
+            <td>
+              Child
+            </td>
+            <td>
+              $15
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Adult
+            </td>
+            <td>
+              $20
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="2">
+              Road bike
+            </td>
+            <td>
+              Child
+            </td>
+            <td>
+              $10
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Adult
+            </td>
+            <td>
+              $15
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="2">
+              Electric bike
+            </td>
+            <td>
+              Child
+            </td>
+            <td>
+              $15
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Adult
+            </td>
+            <td>
+              $20
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="2">
+              Electric Scooter
+            </td>
+            <td>
+              Child
+            </td>
+            <td>
+              $10
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Adult
+            </td>
+            <td>
+              $15
+            </td>
+          </tr>
+           <tr>
+            <td rowspan="2">
+              Monster Scooter
+            </td>
+            <td>
+              Child
+            </td>
+            <td>
+              $10
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Adult
+            </td>
+            <td>
+              $15
+            </td>
+          </tr>
+        </table>
+
+        <br>
+        
+        <button class="faqBtn" onclick="document.location='regpay.html'">Book your Joyride now!</button>
+      </div>
+
+    </article>
+
+  </div>
+
+  
+  <footer>
+    <i class="material-icons">phone</i> 0800 JOYRIDE (0800 569 7433)
+    <img src="media/footerLogo.png" id="footerLogo">
+    <i class="material-icons">email</i> gohappy@joyride.co.nz
+  </footer>
+  <script src="myscripts.js"></script>
+</body>
+</html>

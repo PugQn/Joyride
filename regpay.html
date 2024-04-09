@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+
+<!---This page has all the registration and booking forms. I have not included any validation so the forms will allow you to make some illogical choices.--->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="media/siteLogo.png">
+  <title>Joyride - Register and Book</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!---Source: https://www.w3schools.com/css/css_icons.asp --->
+</head>
+
+<body>
+  <nav>
+    <img src="media/navLogo.png" alt="Joyride Logo" id="navLogo">
+    <a href="regpay.html" onclick="showRPLogin()" class="navBtn" id="navIcon" style="margin-right: 15px;"><i class="material-icons">account_circle</i></a>
+    <a href="faq.html"><button class="navBtn">FAQ</button></a>
+    <a href="services.html"><button class="navBtn">Services</button></a>
+    <a href="index.html"><button class="navBtn">Home</button></a>    
+  </nav>
+
+  <div class="container">
+    <aside>
+      <div class="servicesTitle">
+        <h2 id="servicesTitle">Book a</h2>
+        <img src="media/homeLogo.png" alt="Joyride" class="servicesLogo">
+      </div>
+
+      <button class="wideNavBtns" onclick="showRPLogin()">Login</button>
+
+      <button class="wideNavBtns" onclick="showRPBook()">Book a JoyRide</button>
+      
+      <div class="faqContact">
+        <h3>Contact us!</h3>
+        <p><i class="material-icons">phone</i> 0800 JOYRIDE (0800 569 7433)</p>
+        <p><i class="material-icons">email</i> gohappy@joyride.co.nz</p>
+        <p><i class="material-icons">place</i>85 Ghuznee Street, Te Aro, Wellington 6011</p>
+      </div>
+      
+    </aside>
+
+    <article id="rpLogin">
+      <h2>Log in</h2>
+      <form name="login"> <!--This login form does not work as there is no database for users-->
+        <p>
+          Email:
+          <input type="email" name="email">
+        </p>
+        <p>
+          Password:
+          <input type="password" name="password">
+        </p>
+        <br>
+        <p>
+          <input class="serNavBtns" type="reset">
+          <input class="serNavBtns" type="button" value="Login" onclick="loginalert()">
+        </p>
+      </form>
+      <br>
+      <br>
+      <p>
+        If you do not already have an account, please <a href="#" onclick="showRPRegister()">register</a> to Go Happy!
+      </p>
+
+    </article>
+
+    <!--This <article> allows the user to input their details.-->
+    <article id="rpRegister">
+    
+      <h2>Register</h2>
+      <form name="register">
+        <p>Name:<input type='text'id="name"></p>
+        <p>Address:<input type='text'id="address"></p>
+        <p>Phone number:<input type='text'id="pNum"></p>
+        <p>Email:<input type='email' id="email"></p>
+        <br>
+        <p>
+          <input type="reset" name="Reset" class="serNavBtns">
+          <input type="button" onclick="showRPRegConfirm()" method="post" id="registerBtn" value="Register" class="serNavBtns">
+        </p>
+      </form>
+    </article>
+
+    <!--This <article> shows the user their details for confirmation.-->
+    <article id="rpConfirmDetails">
+      <h2>Confirm your details</h2>
+      <div class="regPayDiv">
+        <table>
+          <tr>
+            <td>
+              Name:
+            </td>
+            <td>
+              <p id="nameConfirm"></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Address:
+            </td>
+            <td>
+              <p id="addressConfirm"></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Phone number:
+            </td>
+            <td>
+              <p id="pNumConfirm"></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Email:
+            </td>
+            <td>
+              <p id="emailConfirm"></p>
+            </td>
+          </tr>
+        </table>
+        <br>
+        <p style="float: center;">
+          <input type="button" value="Cancel" onclick="showRPRegister()" class="serNavBtns" style="float: center;">
+          <input type="button" onclick="registerDeets()" method="post" class="serNavBtns" id="registerBtn" value="Register" style="float: center;">
+        </p>
+      </div>
+    </article>
+
+    <!--This <article> has the most complex form on the site. It allows the user to specify who the rider is, their age group (for pricing), what vehicle, which size (bikes), helmet, helmet size, pick up and return dates and times, and the location. There are <div>s which appear depending on the choices made.-->
+    <article id="rpBook">
+      <h2>Book a Joyride</h2>
+      
+      <form id="riderDetails">
+        
+        <p>Name:<input type="text" name="riderName" required></p>
+        
+        <p>Age group:
+          <select name="riderAge" required>
+              <option selected hidden disabled></option>
+              <option value="Adult">Adult (aged 18 and up)</option>
+              <option value="Child">Child (under 18)</option>
+            </select>
+        </p>
+        
+        <p>Choose your Joyride:
+          <select name="riderRide" onchange="showBikes()" required>
+            <option selected hidden disabled></option>
+            <option value="Mountain bike">Mountain bike</option>
+            <option value="Road bike">Road bike</option>
+            <option value="Electric bike">Electric bike</option>
+            <option value="Electric scooter">Electric Scooter</option>
+            <option value="Monster scooter">Monster Scooter</option>
+          </select>
+        </p>
+        
+        <p id="bikeSize">
+          Bike size (height):
+          <select name="riderBikeSize">
+            <option selected hidden disabled></option>
+            <option value="XS (137-155cm)">Extra small (137-155cm)</option>
+            <option value="S (153-166cm)">Small (153-166cm)</option>
+            <option value="M (161-172cm)">Average (161-172cm)</option>
+            <option value="ML (165-179cm)">Slightly Tall (165-179cm)</option>
+            <option value="L (177-188cm)">Tall (177-188cm)</option>
+            <option value="XL (186-196cm)">Extra Tall (186-196cm)</option>
+            <option value="XXL (195-203cm)">Even Taller (195-203cm)</option>
+          </select>
+        </p>
+        
+        <p> 
+          Do you need a helmet?<input type="checkbox" name="helmetCheck" onchange="showHelmets()">
+        </p>
+
+        <div id="bookHelmetMountain">
+          Helmet size:
+          <select name="riderHelMountSize">
+            <option selected hidden disabled></option>
+            <option value="XL (58-61cm)">Extra Large 58-61cm</option>
+            <option value="L (54-57cm)">Large 54-57cm</option>
+            <option value="M (51-54cm)">Medium 51-54cm</option>
+            <option value="S (47-50cm)">Small 47-50cm</option>
+          </select>
+        </div>
+
+        <div id="bookHelmetRoad">
+          Helmet size:
+          <select name="riderHelRoadSize">
+            <option selected hidden disabled></option>
+            <option value="Adult (54-61cm)">Universal Adult - 54-61cm</option>
+            <option value="Child (46-53cm)">Universal Child - 46-53cm</option>
+          </select>
+        </div>
+
+        <p>Pick up date:<input type="date" name="riderDate"red></p>
+        
+        <p>Pick up time:<input type="time" required name="riderCollectTime"></p>
+         
+        <p> 
+          Joyriding for more than a day?
+          <select name="multiCheck" onchange="showMultiday()">
+            <option selected hidden disabled></option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </p>
+
+        <p id="dayNumber">
+          How many days is your Joyride?<select name="riderDayNumber">
+            <option value="1" selected>Overnight</option>
+            <option value="2">2 days</option>
+            <option value="3">3 days</option>
+            <option value="4">4 days</option>
+            <option value="5">5 days</option>
+            <option value="6">6 days</option>
+            <option value="7">7 days</option>
+            <option value="8">8 days</option>
+            <option value="9">9 days</option>
+            <option value="10">10 days</option>
+          </select>
+        </p>
+        <p class="note" id="dayNumberDiscount">Every fifth day is free!</p>
+
+        
+        <p>Drop off time:<input type="time" required name="riderReturnTime"></p>
+        
+        <p class="note"></p>
+        
+        <p>Pick up location:
+          <select name="riderLocation" required>
+            <option selected hidden disabled></option>
+            <option value="Makara Peak Bike Park">Makara Peak Bike Park</option>
+            <option value="Hutt River Valley">Hutt River Valley</option>
+            <option value="Wellington Harbour Front">Wellington Harbour Front</option>
+          </select>
+        </p>
+
+        
+        <br>
+        <br>
+        <p><input type="button" value="Book it in!" onclick="riderConfirm()" class="faqBtn">
+        </p>
+      </form>
+    </article>  
+
+    <!--This <article> shows the user their booking details and the charges for confirmation.-->
+    <article id="confirmJoyride">
+      <h2>Confirm Your Joyride Details</h2>
+
+      <h3>Booking details:</h3>
+      <table>
+        <tr>
+          <td>
+            Name:
+          </td>
+          <td><p id="riderNameConfirm"></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Age:
+          </td>
+          <td><p id="riderAgeConfirm"></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Joyride:
+          </td>
+          <td>
+            <p id="riderRideConfirm"></p>
+            <p id="riderBikeSizeConfirm"></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Helmet:
+          </td>
+          <td>
+            <p id="riderHelConfirm"></p>
+            <p id="riderHelSizeConfirm"></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Pick up:
+          </td>
+          <td>
+            <p id="riderCollectConfirm"></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Drop off:
+          </td>
+          <td>
+            <p id="riderReturnConfirm"></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Where:
+          </td>
+          <td><p id="riderLocationConfirm"></p>
+          </td>
+        </tr>
+      </table>
+
+      
+      <h3>Costs Summary</h3>
+      <p class="note">All values are in NZD$</p>
+      <table>
+        <tr>
+          <td>
+            Whole day Charges (8 hours at $<span id="hourlyRate1"></span> plus $5 per 24 hours)
+          </td>
+          <td>
+            <p id="overnightTotal"></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Hour Charges (<span id="hours"></span> hours at $<span id="hourlyRate2"></span> per hour)
+          </td>
+          <td>
+            <p id="hourTotal"></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Helmet Deposit:
+          </td>
+          <td>
+            <p id="helmetDeposit"></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Fifth Day Discount:
+          </td>
+          <td>
+            <p id="discount"></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3>Total Cost:</h3>
+          </td>
+          <td>
+            <p id="totalCost"></p>
+          </td>
+        </tr>
+      </table>
+
+      <br>
+      <br>
+      
+      <button class="faqBtn" onclick="showRPBook()">Adjust this Joyride!</button>
+      <button class="faqBtn" onclick="showPay()">Pay for this Joyride!</button>
+      
+    </article>
+
+    <!--This <article> allows the user to enter their card details for payment. A confirmation alert is triggered on payment.-->
+    <article id="pay">
+      <h2>Pay for your Joyride</h2>
+
+      <form name="emailBooking">
+        <input type="checkbox" name="emailCheck" onblur="showEmailInput()"> Would you like to recieve your booking summary and codes by email?
+        <div id="emailInput">
+          <br>
+          <p>
+            Your email: <input type="email" name="email">
+          </p>
+        </div>
+        
+      </form>
+      
+      <br>
+      <div class="payment">
+        <table>
+          <tr>
+            <td id="td1">
+              Amount Due:
+            </td>
+            <td>
+              <p id="amountDue" class="td2"></p>
+            </td>
+          </tr>
+          <tr>
+            <td id="td1">
+              Card Number:
+            </td>
+            <td>
+              <input type="text" class="td2" style="width: 16ch; float:left;">
+            </td>
+          </tr>
+          <tr>
+            <td id="td1">
+              CVC:
+            </td>
+            <td>
+              <input type="text" style="width: 3ch; float:left;">
+            </td>
+          </tr>
+          <tr>
+            <td id="td1">
+              Expiration Date:
+            </td>
+            <td>
+              <input type="month" style="float:left;">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <br>
+      
+      <br>
+      
+      <button class="faqBtn" onclick="paid()">Confirm your payment</button>
+      
+    </article>
+   
+  </div>
+   
+  <footer>
+    <i class="material-icons">phone</i> 0800 JOYRIDE (0800 569 7433)
+    <img src="media/footerLogo.png" id="footerLogo">
+    <i class="material-icons">email</i> gohappy@joyride.co.nz
+  </footer>
+  <script src="myscripts.js"></script>
+</body>
+
+</html>

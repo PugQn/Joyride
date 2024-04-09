@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="media/siteLogo.png">
+  <title>Joyride - FAQ</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!---Source: https://www.w3schools.com/css/css_icons.asp --->
+</head>
+
+<body>
+  <nav>
+    <img src="media/navLogo.png" alt="Joyride Logo" id="navLogo">
+    <a href="regpay.html" class="navBtn" id="navIcon" style="margin-right: 15px;"><i class="material-icons">account_circle</i></a>
+    <a href="faq.html"><button class="navBtn">FAQ</button></a>
+    <a href="services.html"><button class="navBtn">Services</button></a>
+    <a href="index.html"><button class="navBtn">Home</button></a>    
+  </nav>
+  <div class="container">
+    <aside>
+      <div class="servicesTitle">
+        <h2 id="servicesTitle">Talk about</h2>
+        <img src="media/homeLogo.png" alt="Joyride" class="servicesLogo">
+      </div>
+
+
+      <button class="wideNavBtns" onclick="showFaq()">Frequently Asked Questions</button>
+
+      <button class="wideNavBtns" onclick="showFaqFeedback()">Leave Some Feedback</button>
+      
+      <div class="faqContact">
+        <h3>Contact us!</h3>
+        <p><i class="material-icons">phone</i> 0800 JOYRIDE (0800 569 7433)</p>
+        <p><i class="material-icons">email</i> gohappy@joyride.co.nz</p>
+        <p><i class="material-icons">place</i>85 Ghuznee Street, Te Aro, Wellington 6011</p>
+      </div>
+      
+    </aside>
+    
+    <article class="faq" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      
+      <input type="button" class="faqBtn" value="Am I covered by insurance if I have an accident?" onclick="toggleInsurance()">
+        
+      <div class="faqAnswer" id="faqInsurance">
+        <p>
+          All our Joyrides are insured for loss, theft, or damage, and it’s included in the hire price, so you can go worry-free!
+        </p>
+      </div>
+  
+      <input type="button" class="faqBtn" value="Do you deliver?" onclick="toggleDelivery()">
+      <div class="faqAnswer" id="faqDelivery">
+        <p>
+          Delivery is not included in our service, but we have 3 handy locations: Makara Mountain bike park, Hutt River valley and Wellington harbor front. More locations will be available next year. Just choose the one that’s most convenient to your journey when you book your Joyride. Use our location map to find your nearest Joyride.
+        </p>
+      </div>
+
+      <input type="button" class="faqBtn" value="Flat tyre? Broken spoke? Who do I call?" onclick="toggleAssisstance()">
+      <div class="faqAnswer" id="faqAssisstance">
+        <p>
+          Call us on 0800 JOY RIDE or email us at gohappy@joyride.co.nz and either Zhang or Tory will get back to you as soon as possible. Our response time is usually 5 minutes between 9am and 5pm, on weekdays. We’re usually out Joyriding during the weekends!
+        </p>
+      </div>
+
+      <input type="button" class="faqBtn" value="Do I need to pay a deposit?" onclick="toggleDeposit()">
+      <div class="faqAnswer" id="faqDeposit">
+        <p>
+          All our Joyrides are insured for loss, theft, or damage, and it’s included in the hire price, so you can go worry-free!
+        </p>
+      </div>
+
+      <input type="button" class="faqBtn" value="What if my plans change?" onclick="toggleChange()">
+      <div class="faqAnswer" id="faqChange">
+        <p>
+          You can modify your Joyride up to 30 minutes before your planned journey. This includes changing vehicle, helmet hire as well as dates, times and locations. Log in and adjust your booking, or alternatively email or call us. Just remember, you can’t hire it if it’s not there, so book early to get the Joyride of your choice.
+        </p>
+      </div>
+
+      <input type="button" class="faqBtn" value="Are there discounts for multiple hires?" onclick="toggleDiscount()">
+      <div class="faqAnswer" id="faqDiscount">
+        <p>
+          Yes! Every fifth Joyride is free, so you can Go Happy!
+        </p>
+      </div>
+
+      <input type="button" class="faqBtn" value="Can anyone else pick up my Joyride?" onclick="toggleAltUser()">
+      <div class="faqAnswer" id="faqAltUser">
+        <p>
+          You need to register any Joyriders when you book your vehicle. This is so we can make sure you’re insured for any loss, theft, or damage whilst you’re on your Joyride.
+        </p>
+      </div>
+      
+    </article>
+  
+    <article class="faq" id="faqFeedback">
+      
+      <h2>Leave us some Feedback!</h2>
+
+      <p>
+        We're always looking for ways to improve. Any feedback is gratefully recieved. Thank you for helping us Go Happy!
+      </p>
+
+      <p>
+        Please share your feedback with us. The more detail the better!
+      </p>
+      
+      <form id="feedback">
+        <p>
+          Name:
+          <input type="text" name="name">
+        </p>
+        <p>
+          Address:
+          <input type="textbox" name="address" rows="3" >
+        </p>
+        <p>
+          Phone Number:
+          <input type="number" name="pNumber">
+        </p>
+         <p>
+          Email:
+          <input type="email" name="email" required>
+        </p>
+        <p>
+          Feeback Type:
+          <select name="type">
+            <option selected>Compliment</option>
+            <option>Question</option>
+            <option>Comment</option>
+            <option>Complaint</option>
+          </select>
+        </p>
+        <p>
+          <textarea rows="10" cols="40" name="feedbackText"></textarea>
+        </p>
+        <p>
+          <input type="checkbox" name="contact">
+          I want to be contacted about this feedback.
+        </p>
+        <br>
+        <p>
+          <input type="button" value="Submit" class="serNavBtns" onclick="submitFeedback()">
+        </p>
+        
+      </form>
+    </article>
+
+  </div>
+  
+  <footer>
+    <i class="material-icons">phone</i> 0800 JOYRIDE (0800 569 7433)
+    <img src="media/footerLogo.png" id="footerLogo">
+    <i class="material-icons">email</i> gohappy@joyride.co.nz
+  </footer>
+  <script src="myscripts.js"></script>
+</body>
+
+</html>
