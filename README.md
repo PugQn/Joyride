@@ -1,6 +1,4 @@
-# Joyride
-
-Joyride (INFO101, Victoria University Wellington 2023)
+# Joyride (INFO101, Victoria University Wellington 2023)
 
 This was an individual project. In response to the assessment provocation, I 
 chose to brand my fictional company as "fun", "A Joy to Ride", which is 
